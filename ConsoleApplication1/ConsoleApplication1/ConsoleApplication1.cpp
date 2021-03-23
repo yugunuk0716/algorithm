@@ -1,34 +1,19 @@
-﻿#include <iostream>
+﻿#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
 #include <stdio.h>
-#include <algorithm>
 #include <string.h>
-#define COLUMN 7 
-#define ROW 5
+
 using namespace std;
-int main() 
+int main()
 {
+
 	// 20214 유건욱의 코트
-	char arr[ROW][COLUMN] = { 0, };
-	int row,col;
-	int cnt = 1;
-
-	for (row = 0; row < ROW; row++) 
-	{
-		for (col = 0; col < COLUMN; col++)
-		{
-			cin >> arr[row][col];
-
-		}
-		
-	}
-	
-	
-	
-	
-	return 0;
-	
 
 }
+	
+
+
+
 #pragma region 주민번호
 /*char id[14];
 int year;
@@ -149,3 +134,51 @@ return 0;*/
 
 
 #pragma endregion
+#pragma region 다차원 배열 역출력
+/*char arr1[10][10] = { 0, };
+	char arr2[10][10] = { 0, };
+	char arr3[10][10] = { 0, };
+	int i;
+	int count;
+	int total;
+
+	int stored = 0;
+	double waste;
+
+	total = sizeof(arr1);
+	count = sizeof(arr1) / sizeof(arr1[0]);
+
+	for (i = 0; i < count; i++)
+	{
+		cin >> arr1[i];
+
+
+	}
+	for (int j = 0; j < count; j++)
+	{
+		cin >> arr2[j];
+
+
+	}
+	for (int n = 0; n < count; n++)
+	{
+		cin >> arr3[n];
+
+
+	}
+
+
+	for (total; total > 0; total--)
+	{
+		if (total > 10)
+		{
+			total = 8;
+		}
+		cout << arr1[total][total] ;
+	}
+
+
+	return 0;*/
+
+#pragma endregion
+
