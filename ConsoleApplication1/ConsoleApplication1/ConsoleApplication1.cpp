@@ -1,14 +1,26 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
-#include <iostream>
-#include <stdio.h>
-#include <string.h>
+﻿#include <iostream>
 
 using namespace std;
+
+int Facto(int n) 
+{
+	if (n == 0) 
+	{
+		return 1;
+	}
+	else
+	{
+		return(n * Facto(n - 1));
+	}
+}
+
 int main()
 {
-
 	// 20214 유건욱의 코트
-
+	int n;
+	cin >> n;
+	cout << "1부터 " << n << " 까지의 곱은" << Facto(n) << "입니다" << endl;
+	return(0);
 }
 	
 
