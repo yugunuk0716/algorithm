@@ -2,24 +2,30 @@
 
 using namespace std;
 
-int Facto(int n) 
+int Gaus(int g) 
 {
-	if (n == 0) 
+	static int count = 0;
+	static int sum = 0;
+
+	sum += 1 + g;
+	if (count < g - 1)
 	{
-		return 1;
+		count++;
+		Gaus(g);
 	}
 	else
 	{
-		return(n * Facto(n - 1));
+		return sum / 2;
 	}
 }
 
 int main()
 {
 	// 20214 유건욱의 코트
-	int n;
-	cin >> n;
-	cout << "1부터 " << n << " 까지의 곱은" << Facto(n) << "입니다" << endl;
+	int i ;
+	cin >> i;
+	cout << Gaus(i);
+	
 	return(0);
 }
 	
@@ -193,4 +199,40 @@ return 0;*/
 	return 0;*/
 
 #pragma endregion
+#pragma region 팩토리얼
+//int Facto(int n)
+//{
+//	if (n == 0)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return(n * Facto(n - 1));
+//	}
+//	int n;
+//	cin >> n;
+//	cout << "1부터 " << n << " 까지의 곱은" << Facto(n) << "입니다" << endl;
+//}
+#pragma endregion
+#pragma region 피보나치 수열
+//int Fib(int n)
+//{
+//	if (n == 1 || n == 2)
+//		return 1;
+//	else
+//		return Fib(n - 1) + Fib(n - 2);
+//}
+//
+//int main()
+//{
+//	// 20214 유건욱의 코트
+//	int i;
+//	for (i = 1; i <= 15; i++)
+//	{
+//		cout << Fib(i) << endl;
+//	}
+//	return(0);
+#pragma endregion
+
 
