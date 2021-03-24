@@ -2,30 +2,25 @@
 
 using namespace std;
 
-int Gaus(int g) 
+int Fib(int n)
 {
-	static int count = 0;
-	static int sum = 0;
-
-	sum += 1 + g;
-	if (count < g - 1)
-	{
-		count++;
-		Gaus(g);
-	}
+	if (n == 1 || n == 2)
+		return 1;
 	else
-	{
-		return sum / 2;
-	}
+		return Fib(n - 1) + Fib(n - 2);
 }
 
 int main()
 {
 	// 20214 유건욱의 코트
-	int i ;
-	cin >> i;
-	cout << Gaus(i);
-	
+	int i = 1;
+	int count = 0;
+	cin >> count;
+
+	for (i = 1; i <= count; i++)
+	{
+		cout << Fib(i) << endl;
+	}
 	return(0);
 }
 	
@@ -234,5 +229,79 @@ return 0;*/
 //	}
 //	return(0);
 #pragma endregion
+#pragma region 가우스
+//#include <iostream>
+//
+//using namespace std;
+//
+//int Gaus(int g)
+//{
+//	static int count = 0;
+//	static int sum = 0;
+//
+//	sum += 1 + g;
+//	if (count < g - 1)
+//	{
+//		count++;
+//		Gaus(g);
+//	}
+//	else
+//	{
+//		return sum / 2;
+//	}
+//}
+//
+//int main()
+//{
+//	// 20214 유건욱의 코트
+//	int i;
+//	cin >> i;
+//	cout << Gaus(i);
+//
+//	return(0);
+//}
+#pragma endregion
+#pragma region 가우스 재귀함수 아님
+//#include <iostream>
+//
+//using namespace std;
+//
+//
+//int main()
+//{
+//	int i = 0;
+//	int sum = 0;
+//	int num = 0;
+//	cin >> num;
+//	for (i = 0; i <= num; i++)
+//	{
+//		sum += i;
+//	}
+//	cout << sum;
+//}
+#pragma endregion
+#pragma region 팩토리얼 재귀함수 아님
+//#include <iostream>
+//
+//using namespace std;
+//
+//
+//int main()
+//{
+//	int i = 0;
+//	int sum = 1;
+//	int num = 1;
+//	cin >> num;
+//	for (i = 1; i <= num; i++)
+//	{
+//		sum *= i;
+//	}
+//	cout << sum;
+//	return 0;
+//}
+#pragma endregion
+
+
+
 
 

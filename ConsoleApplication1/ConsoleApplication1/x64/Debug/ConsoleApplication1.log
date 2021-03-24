@@ -1,3 +1,2 @@
 ﻿  ConsoleApplication1.cpp
-D:\수업\algorithm\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(5,22): warning C4042: 'g': 스토리지 클래스가 잘못되었습니다.
   ConsoleApplication1.vcxproj -> D:\수업\algorithm\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe
