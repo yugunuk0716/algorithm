@@ -2,28 +2,31 @@
 
 using namespace std;
 
-
+void hanoi(int n, char f, char b, char t) 
+{
+	if (n == 1) 
+	{
+		cout << "원반 1을" << f << "에서" << t << "로 이동" << endl;
+		
+	}
+	else
+	{
+		hanoi(n - 1, f, t, b);
+		cout << "원반" << n << "을" << f << "에서" << t << "로 이동" << endl;
+		hanoi(n - 1, b, f, t);
+		
+	}
+		
+}
 
 int main()
 {
-	// 20214 유건욱의 코트
-	int i = 1;
-	int count = 0;
-	cin >> count;
+	int cNum = 0;
+	cin >> cNum;
+	hanoi(cNum, 'A', 'B', 'C');
 
-	for (i = 1; i <= count; i++)
-	{
-		if (i == 1 || i == 2) 
-		{
-			cout << "1" << endl;
-		}
-		else
-		{
-			cout << (i - 1) + (i - 2) << endl;
-		}
-		
-	}
-	return(0);
+	return 0;
+	
 }
 	
 
@@ -302,8 +305,59 @@ return 0;*/
 //	return 0;
 //}
 #pragma endregion
-
-
-
-
-
+#pragma region 가우스 없는 가우스 팀
+//#include <iostream>
+//
+//using namespace std;
+//
+//int Gaus(int g)
+//{
+//	if (g == 1)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return Gaus(g - 1) + g;
+//	}
+//
+//}
+//
+//int main()
+//{
+//	// 20214 유건욱의 코트
+//	int i;
+//	cin >> i;
+//	cout << Gaus(i);
+//
+//	return(0);
+//}
+#pragma endregion
+#pragma region 역순
+//#include <iostream>
+//#include <string>
+//#include <algorithm>
+//
+//using namespace std;
+//
+//int rev(int n)
+//{
+//	if (n == 0)
+//		return 1;
+//	else
+//	{
+//		string s = to_string(n);
+//		reverse(s.begin(), s.end());
+//		return atoi(s.c_str());
+//	}
+//
+//}
+//
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//	cout << rev(n) << endl;
+//
+//}
+#pragma endregion
