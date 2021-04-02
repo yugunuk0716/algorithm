@@ -1,25 +1,27 @@
-﻿#include <iostream>
-using namespace std;
-//20214 유건욱
-int Even(int a, int b)
-{
-	if (a <= b)
-	{
-		if (a %2 == 0 )
-			cout << a << endl;
-		return Even(a + 1, b);
-	}
-	
+﻿#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <iostream>
+
+const int REPEATED = 36000;
+
+int main(void) {
+    int i, arr[11] = { 0, };
+
+    srand(time(NULL));
+    for (i = 1; i <= REPEATED; i++) {
+        arr[rand() % 6 + rand() % 6]++;
+    }
+
+    printf("Output : \n\n");
+    for (i = 0; i < 11; i++) {
+        printf("%2d : %4d (%f)\n", 2 + i, arr[i], (float)arr[i] / REPEATED);
+    }
+
+    return 0;
 }
 
 
-int main()
-{
-	int a, b;
-	cin >> a;
-	cin >> b;
-	Even(a, b);
-}
 
 
 #pragma region 최댓값 출력
@@ -236,4 +238,28 @@ int main()
 #pragma endregion
 
 
+#pragma region 짝수만 출력
+#include <iostream>
+//using namespace std;
+////20214 유건욱
+//int Even(int a, int b)
+//{
+//	if (a <= b)
+//	{
+//		if (a % 2 == 0)
+//			cout << a << endl;
+//		return Even(a + 1, b);
+//	}
+//
+//}
+//
+//
+//int main()
+//{
+//	int a, b;
+//	cin >> a;
+//	cin >> b;
+//	Even(a, b);
+//}
+#pragma endregion
 
