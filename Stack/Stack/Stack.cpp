@@ -1,83 +1,4 @@
-﻿//20214 유건욱의 코드
-//#include <iostream>
-//#include <string>
-//#include <stack>
-//#include <sstream>
-//
-//using namespace std;
-//
-//struct oper {
-//    int p; 
-//    string o; 
-//};
-//
-//stack<int> num;
-//stack<oper> op;
-//
-//void calc() {
-//    int a, b, result;
-//    b = num.top();
-//    num.pop();
-//    a = num.top();
-//    num.pop();
-//    string oper = op.top().o;
-//    op.pop();
-//
-//    if (oper == "*")
-//        result = a * b;
-//    else if (oper == "/")
-//        result = a / b;
-//    else if (oper == "+")
-//        result = a + b;
-//    else if (oper == "-")
-//        result = a - b;
-//    num.push(result);
-//}
-//
-//int main() {
-//    ios::sync_with_stdio(false);
-//    cin.tie(NULL);
-//    cout.tie(NULL);
-//
-//    string input = "12 + 12 * ( 1 - 8 ) / 2";
-//    stringstream ss(input);
-//
-//   
-//    string tok;
-//    while (ss >> tok) {
-//        if (tok == "(") {
-//            op.push({ 0, tok });
-//        } 
-//        else if (tok == ")") {
-//            while (op.top().o != "(")
-//                calc();
-//            op.pop();
-//        }
-//        else if (tok == "*" || tok == "/" || tok == "+" || tok == "-") {
-//            int prior; 
-//            if (tok == "*")
-//                prior = 2;
-//            else if (tok == "/")
-//                prior = 2;
-//            else if (tok == "+")
-//                prior = 1;
-//            else if (tok == "-")
-//                prior = 1;
-//
-//            while (!op.empty() && prior <= op.top().p)
-//                calc();
-//            op.push({ prior, tok });
-//        }
-//        else 
-//            num.push(stoi(tok));
-//    }
-//    while (!op.empty())
-//        calc();
-//
-//    cout << num.top();
-//
-//    return 0;
-//}
+﻿
 
 
 
@@ -251,154 +172,154 @@
 //stack<int,vector<int>> example;
 
 #pragma region 스택 맵
-#include <iostream>
-#include <Windows.h>
-#include <stack>
-#include <vector>
-using namespace std;
-//20214 유건욱의 코드
-
-#define MAZESIZE_X 12
-#define MAZESIZE_Y 22
-#define EXIT_X 11
-#define EXIT_Y 16
-
-typedef struct Position
-{
-	int x;
-	int y;
-	int d;
-}position;
-
-typedef struct Mtable
-{
-	int x;
-	int y;
-}mtable;
-
-int Maze[MAZESIZE_X][MAZESIZE_Y] =
-{
-	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
-	{1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,0,1,0,1},
-	{1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-	{1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1},
-	{1,0,0,1,0,1,0,1,0,0,1,1,1,1,1,0,0,1,1,1,0,1},
-	{1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-	{1,1,0,1,1,1,0,1,0,1,1,1,1,1,1,0,1,1,1,1,1,1},
-	{1,0,0,0,0,0,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,1},
-	{1,1,1,0,1,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1},
-	{1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-	{1,0,1,0,0,1,0,1,1,1,0,1,0,0,0,1,0,1,0,1,0,1},
-	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
-};
-Mtable Move[4] =
-{
-	{0,1},
-	{1,0},
-	{-0,1},
-	{-1,0}
-};
-
-int Mark[MAZESIZE_X][MAZESIZE_Y];
-int top;
-Position Trace[(MAZESIZE_X - 2) * (MAZESIZE_Y - 2)];
-
-void ShowMaze(Position);
-void Push(Position);
-void Pop(Position* P);
-
-int main(void)
-{
-	int isFound = FALSE;
-	int i, dir;
-
-	Position Now = { 1,1,0 };
-	Position Next;
-
-	Push(Now);
-
-	while (!isFound && top > 0)
-	{
-		Pop(&Now);
-		dir = Now.d;
-		while (dir < 4)
-		{
-			Next.x = Now.x + Move[dir].x;
-			Next.y = Now.y + Move[dir].y;
-			if (Next.x == EXIT_X && Next.y == EXIT_X)
-			{
-				Next.d = dir;
-				Push(Next);
-				isFound = TRUE;
-				break;
-			}
-			else if ((Maze[Next.x][Next.y]) == 0 && (Mark[Next.x][Next.y] == 0))
-			{
-				Now.d = ++dir;
-				Push(Now);
-
-				Now.x = Next.x;
-				Now.y = Next.y;
-				dir = 0;
-
-				Mark[Next.x][Next.y] = 1;
-			}
-			else dir++;
-
-			ShowMaze(Now);
-
-		}
-	}
-	if (isFound == TRUE)
-	{
-		for (i = 0; i < top; i++)
-			ShowMaze(Trace[i]);
-	}
-	else cout << "Not Found!" << endl;
-	system("pause");
-
-
-	return 0;
-
-}
-void ShowMaze(Position P)
-{
-	int i, j;
-	Sleep(50);
-	system("cls");
-	cout << "출구는 (11,16)" << endl;
-	cout << "현재 좌표는" << P.x << "" << P.y << "" << P.d << endl;
-	for (i = 0; i < MAZESIZE_X; i++)
-	{
-		for (j = 0; j < MAZESIZE_Y; j++)
-		{
-			if (Maze[i][j] == 1)
-				cout << "#" << endl;
-			else if (P.x == i && P.y == j)
-				cout << "&";
-			else
-				cout << " ";
-		}
-
-	}
-	cout << endl;
-
-
-}
-void Push(Position P)
-{
-	Trace[top].x = P.x;
-	Trace[top].y = P.y;
-	Trace[top].d = P.d;
-	top++;
-}
-
-void Pop(Position* P)
-{
-	top--;
-	P->x = Trace[top].x;
-	P->y = Trace[top].y;
-	P->d = Trace[top].d;
-
-}
+//#include <iostream>
+//#include <Windows.h>
+//#include <stack>
+//#include <vector>
+//using namespace std;
+////20214 유건욱의 코드
+//
+//#define MAZESIZE_X 12
+//#define MAZESIZE_Y 22
+//#define EXIT_X 11
+//#define EXIT_Y 16
+//
+//typedef struct Position
+//{
+//	int x;
+//	int y;
+//	int d;
+//}position;
+//
+//typedef struct Mtable
+//{
+//	int x;
+//	int y;
+//}mtable;
+//
+//int Maze[MAZESIZE_X][MAZESIZE_Y] =
+//{
+//	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+//	{1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,0,1,0,1},
+//	{1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+//	{1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1},
+//	{1,0,0,1,0,1,0,1,0,0,1,1,1,1,1,0,0,1,1,1,0,1},
+//	{1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+//	{1,1,0,1,1,1,0,1,0,1,1,1,1,1,1,0,1,1,1,1,1,1},
+//	{1,0,0,0,0,0,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,1},
+//	{1,1,1,0,1,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1},
+//	{1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+//	{1,0,1,0,0,1,0,1,1,1,0,1,0,0,0,1,0,1,0,1,0,1},
+//	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+//};
+//Mtable Move[4] =
+//{
+//	{0,1},
+//	{1,0},
+//	{-0,1},
+//	{-1,0}
+//};
+//
+//int Mark[MAZESIZE_X][MAZESIZE_Y];
+//int top;
+//Position Trace[(MAZESIZE_X - 2) * (MAZESIZE_Y - 2)];
+//
+//void ShowMaze(Position);
+//void Push(Position);
+//void Pop(Position* P);
+//
+//int main(void)
+//{
+//	int isFound = FALSE;
+//	int i, dir;
+//
+//	Position Now = { 1,1,0 };
+//	Position Next;
+//
+//	Push(Now);
+//
+//	while (!isFound && top > 0)
+//	{
+//		Pop(&Now);
+//		dir = Now.d;
+//		while (dir < 4)
+//		{
+//			Next.x = Now.x + Move[dir].x;
+//			Next.y = Now.y + Move[dir].y;
+//			if (Next.x == EXIT_X && Next.y == EXIT_X)
+//			{
+//				Next.d = dir;
+//				Push(Next);
+//				isFound = TRUE;
+//				break;
+//			}
+//			else if ((Maze[Next.x][Next.y]) == 0 && (Mark[Next.x][Next.y] == 0))
+//			{
+//				Now.d = ++dir;
+//				Push(Now);
+//
+//				Now.x = Next.x;
+//				Now.y = Next.y;
+//				dir = 0;
+//
+//				Mark[Next.x][Next.y] = 1;
+//			}
+//			else dir++;
+//
+//			ShowMaze(Now);
+//
+//		}
+//	}
+//	if (isFound == TRUE)
+//	{
+//		for (i = 0; i < top; i++)
+//			ShowMaze(Trace[i]);
+//	}
+//	else cout << "Not Found!" << endl;
+//	system("pause");
+//
+//
+//	return 0;
+//
+//}
+//void ShowMaze(Position P)
+//{
+//	int i, j;
+//	Sleep(50);
+//	system("cls");
+//	cout << "출구는 (11,16)" << endl;
+//	cout << "현재 좌표는" << P.x << "" << P.y << "" << P.d << endl;
+//	for (i = 0; i < MAZESIZE_X; i++)
+//	{
+//		for (j = 0; j < MAZESIZE_Y; j++)
+//		{
+//			if (Maze[i][j] == 1)
+//				cout << "#" << endl;
+//			else if (P.x == i && P.y == j)
+//				cout << "&";
+//			else
+//				cout << " ";
+//		}
+//
+//	}
+//	cout << endl;
+//
+//
+//}
+//void Push(Position P)
+//{
+//	Trace[top].x = P.x;
+//	Trace[top].y = P.y;
+//	Trace[top].d = P.d;
+//	top++;
+//}
+//
+//void Pop(Position* P)
+//{
+//	top--;
+//	P->x = Trace[top].x;
+//	P->y = Trace[top].y;
+//	P->d = Trace[top].d;
+//
+//}
 #pragma endregion
