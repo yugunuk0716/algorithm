@@ -1,4 +1,2 @@
 ﻿  Stack.cpp
-D:\수업\algorithm2\Stack\Stack\Stack.cpp(15,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-D:\수업\algorithm2\Stack\Stack\Stack.cpp(29,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   Stack.vcxproj -> D:\수업\algorithm2\Stack\Debug\Stack.exe
