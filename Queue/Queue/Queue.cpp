@@ -35,7 +35,7 @@ int main(void)
 	InitQueue(&queue, size);
 	while (true)
 	{
-		cout <<"1. Enqueue  2.Dequeue"
+		cout << "1. Enqueue  2.Dequeue";
 	}
 
 	

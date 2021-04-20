@@ -1,43 +1,97 @@
 ﻿//20214 유건욱의 코드
-
+//명재문 도움
 #include <iostream>
 #include <string>
 #include <stack>
 #include <vector>
+#include <sstream>
 
 using namespace std;
 
-struct oper {
-    int p; 
-    string o; 
-};
 
 stack<int,vector<int>> num;
-stack<oper, vector<oper>> op;
 
-void calculation() 
-{
-    int a, b, result;
-    b = num.top();
-    num.pop();
-    a = num.top();
-    num.pop();
-    string oper = op.top().o;
-    op.pop();
 
-    if (oper == "*")
-        result = a * b;
-    else if (oper == "/")
-        result = a / b;
-    else if (oper == "+")
-        result = a + b;
-    else if (oper == "-")
-        result = a - b;
-    num.push(result);
-}
 
 int main()
 {
+    char cal = '+';
+    int sum = 0;
+    int count = 0;
+    int parCount = 0;
+
+    cout << "숫자와 연산자 사이에 꼭 공백 문자를 넣고 식을 입력해 주세요" << endl;
+    string ex;
+    getline(cin,ex);
+    vector<string> vs;
+    stringstream ss(ex);
+
+    while(getline(ss,ex,' '))
+    {
+        vs.push_back(ex);
+    }
+    for (int i = 0; i < vs.size(); i++) 
+    {
+        if (vs[i].length() > 1) 
+        {
+            int a = atoi(vs[i].c_str());
+            if (a == 0) 
+            {
+                cout << "당신이 넣은 것이 숫자가 맞습니까? 만약 숫자가 맞다면 경기게임마이스터고 명재문에게 찾아오세요 ^^1" << endl;
+                return 0;
+            }
+            
+                num.push(a);
+            
+        }
+        else if (vs[i].length() == 1) 
+        {
+            cout << vs[i][0] << endl;
+            switch (vs[i][0])
+            {
+            case '+':
+                cal = '+';
+                break;
+            case '-':
+                cal = '-';
+                break;
+            case '/':
+                cal = '/';
+                break;
+            case '*':
+                cal = '*';
+                break;
+            case '(':
+                count++;
+                parCount++;
+                break;
+            case ')':
+                count-= 1;
+                cout << "실행 됨?";
+                break;
+
+            default:
+                if ('0' <= vs[i][0] && vs[i][0] <= '9') 
+                {
+                     int b =vs[i][0] - '0';
+                     num.push(b);
+                }
+                else
+                {
+                    cout << "당신이 넣은 것이 숫자가 맞습니까? 만약 숫자가 맞다면 경기게임마이스터고 명재문에게 찾아오세요 ^^2" << endl;
+                    return 0;
+                }
+                break;
+            }
+            if (count != 0) 
+            {
+                cout << "당신이 넣은 것이 숫자가 맞습니까? 만약 숫자가 맞다면 경기게임마이스터고 명재문에게 찾아오세요 ^^3" << endl;
+                cout << count;
+                return 0;
+            }
+        }
+    }
+   
 
 	return 0;
 }
