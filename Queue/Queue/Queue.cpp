@@ -1,46 +1,84 @@
 ﻿//20214유건욱
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 using namespace std;
 
+int count = 0;
+int n;
+int front = 0, rear = 0;
+int* queue;
 
-#define NEXT(index,QSIZE) ((index+1)%QSIZE)
+void enQueue(int data) {
 
-typedef struct Queue 
-{
-	int* buf;
-	int qsize;
-	int front;
-	int rear;
-	int count;
-
-}Queue;
-
-void InitQueue(Queue* queue, int qsize);
-int IsFull(Queue* queue);
-int Empty(Queue*queue);
-void Enqueue(Queue*queue,int data);
-int Dequeue(Queue* queue);
-
-int main(void)
-{
-	int i, size;
-	int select = -1;
-
-
-	Queue queue;
-
-	cout << "큐의 크기 입력 : ";
-	cin >> size;
-
-	InitQueue(&queue, size);
-	while (true)
-	{
-		cout << "1. Enqueue  2.Dequeue";
+	if ((rear + 1) % (n + 1) == front) {
+		cout << "큐가 꽉 찼습니다." << endl;
+		return;
 	}
 
-	
-	
-	return 0;
+	rear = (rear + 1) % (n + 1);
+	queue[rear % (n + 1)] = data;
+
+}
+
+int deQueue() {
+	int data;
+
+	if (front == rear) {
+		cout << "큐가 비었습니다." << endl;
+		return 0;
+	}
+
+	data = queue[(front + 1) % (n + 1)];
+	front = (front + 1) % (n + 1);
+}
+
+void printQueue() {
+	int idx = 0;
+	idx = (front + 1) % (n + 1);
+
+	do {
+		if (front == rear) {
+			cout << "큐가 비었습니다." << endl;
+			break;
+		}
+		else if (idx > rear)
+			break;
+		cout << queue[idx++ % (n + 1)] << endl;
+	} while (1);
+
+}
+
+int main() {
+
+	cout << "원형 큐의 크기 입력 : ";
+	cin >>  n;
+	queue = (int*)malloc(sizeof(int) * (n + 1));
+
+	while (1) {
+		int menu, data;
+		printf("\n1. 삽입 , 2. 삭제, 3. 출력, 4. 종료\n");
+		cin >> menu;
+
+		switch (menu)
+		{
+		case 1:
+			cout << "삽입할 데이터 입력 : ";
+			cin >> data;
+			enQueue(data);
+			break;
+		case 2:
+			deQueue();
+			break;
+		case 3:
+			printQueue();
+			break;
+		case 4:
+			exit(1);
+			break;
+		}
+	}
+
 }
 
 #pragma region 큐 구현

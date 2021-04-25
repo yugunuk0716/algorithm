@@ -1,5 +1,2 @@
 ﻿  List.cpp
-D:\수업\algorithm2\List\List\List.cpp(109,6): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
-D:\수업\algorithm2\List\List\List.cpp(130,6): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
-D:\수업\algorithm2\List\List\List.cpp(163,6): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
   List.vcxproj -> D:\수업\algorithm2\List\Debug\List.exe
