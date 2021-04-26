@@ -8,8 +8,8 @@
 
 using namespace std;
 
-
-stack<int,vector<int>> num;
+vector<string> vs;
+stack<char,vector<char>> num;
 
 
 
@@ -66,8 +66,7 @@ int main()
                 parCount++;
                 break;
             case ')':
-                count-= 1;
-                cout << "실행 됨?";
+                count--;
                 break;
 
             default:
@@ -83,13 +82,15 @@ int main()
                 }
                 break;
             }
-            if (count != 0) 
-            {
-                cout << "당신이 넣은 것이 숫자가 맞습니까? 만약 숫자가 맞다면 경기게임마이스터고 명재문에게 찾아오세요 ^^3" << endl;
-                cout << count;
-                return 0;
-            }
+           
         }
+        
+    }
+    if (count != 0)
+    {
+        cout << "당신이 넣은 것이 숫자가 맞습니까? 만약 숫자가 맞다면 경기게임마이스터고 명재문에게 찾아오세요 ^^3" << endl;
+        cout << count;
+        return 0;
     }
    
 
@@ -248,4 +249,30 @@ int main()
 //	P->d = Trace[top].d;
 //}
 #pragma endregion
+#pragma region 천단위 콤마
+//int input = 0;
+//cin >> input;
+//
+//while (input > 0)
+//{
+//    if (num.size() % 4 != 3)
+//    {
+//        num.push(input % 10 + 48);
+//        input /= 10;
+//    }
+//    else if (num.size() % 4 == 3)
+//    {
+//        num.push(',');
+//    }
+//}
+//while (num.size() > 0)
+//{
+//    char output = num.top();
+//    cout << output;
+//    num.pop();
+//}
+//return 0;
+//}
+#pragma endregion
+
 
