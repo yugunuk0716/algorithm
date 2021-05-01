@@ -1,52 +1,62 @@
 ﻿//20214 유건욱의 코드
-//명재문 도움
+//명재문, 김민준 도움
 #include <iostream>
 #include <string>
 #include <stack>
 #include <vector>
 #include <sstream>
+#include <string>
 
 using namespace std;
 
 vector<string> vs;
-stack<char,vector<char>> num;
-
-
-
-int main()
+stack<int,vector<int>> num;
+stack<int, vector<int>> startpar;
+stack<int, vector<int>> endpar;
+int parCount;
+int Cal(int first , int end) 
 {
     char cal = '+';
     int sum = 0;
+    
     int count = 0;
-    int parCount = 0;
-
-    cout << "숫자와 연산자 사이에 꼭 공백 문자를 넣고 식을 입력해 주세요" << endl;
-    string ex;
-    getline(cin,ex);
-    vector<string> vs;
-    stringstream ss(ex);
-
-    while(getline(ss,ex,' '))
+    for (int i = first; i <end; i++)
     {
-        vs.push_back(ex);
-    }
-    for (int i = 0; i < vs.size(); i++) 
-    {
-        if (vs[i].length() > 1) 
+
+        if (vs[i].length() > 1)
         {
-            int a = atoi(vs[i].c_str());
-            if (a == 0) 
+            int t = atoi(vs[i].c_str());
+            if (t == 0)
             {
                 cout << "당신이 넣은 것이 숫자가 맞습니까? 만약 숫자가 맞다면 경기게임마이스터고 명재문에게 찾아오세요 ^^1" << endl;
                 return 0;
             }
-            
-                num.push(a);
-            
+
+
+            switch (cal)
+            {
+            case '+':
+                num.push(t);
+                break;
+            case '-':
+                num.push(-t);
+                break;
+            case '*':
+                sum = num.top() * t;
+                num.pop();
+                num.push(sum);
+
+                break;
+            case '/':
+                sum = num.top() / t;
+                num.pop();
+                num.push(sum);
+            default:
+                break;
+            }
         }
-        else if (vs[i].length() == 1) 
+        else if (vs[i].length() == 1)
         {
-            cout << vs[i][0] << endl;
             switch (vs[i][0])
             {
             case '+':
@@ -63,35 +73,138 @@ int main()
                 break;
             case '(':
                 count++;
-                parCount++;
+                //parCount++;
                 break;
             case ')':
                 count--;
                 break;
 
             default:
-                if ('0' <= vs[i][0] && vs[i][0] <= '9') 
+                if ('0' <= vs[i][0] && vs[i][0] <= '9')
                 {
-                     int b =vs[i][0] - '0';
-                     num.push(b);
+                    int b = vs[i][0] - '0';
+
+                    switch (cal)
+                    {
+                    case '+':
+                        num.push(b);
+                        break;
+                    case '-':
+                        num.push(-b);
+                        break;
+                    case '*':
+                        sum = num.top() * b;
+                        num.pop();
+                        num.push(sum);
+
+                        break;
+                    case '/':
+                        sum = num.top() / b;
+                        num.pop();
+                        num.push(sum);
+                    default:
+                        break;
+                    }
+
+
                 }
                 else
                 {
                     cout << "당신이 넣은 것이 숫자가 맞습니까? 만약 숫자가 맞다면 경기게임마이스터고 명재문에게 찾아오세요 ^^2" << endl;
-                    return 0;
+                    return 0 ;
                 }
                 break;
             }
-           
+
         }
-        
+
     }
+    int forNum = num.size();
+    for (int i = 0; i < forNum; i++)
+    {
+        sum += num.top();
+        num.pop();
+    }
+    cout << "괄호 안" << sum << endl;
+    return sum;
+    
+    
+
     if (count != 0)
     {
         cout << "당신이 넣은 것이 숫자가 맞습니까? 만약 숫자가 맞다면 경기게임마이스터고 명재문에게 찾아오세요 ^^3" << endl;
         cout << count;
         return 0;
     }
+}
+
+int main()
+{
+    int result = 0;
+    parCount = 0;
+    int parInVector = 0;
+    int startParCal = 0;
+    int endParCal = 0;
+
+    cout << "숫자와 연산자 사이에 꼭 공백 문자를 넣고 식을 입력해 주세요" << endl;
+    string ex;
+    getline(cin,ex);
+    stringstream ss(ex);
+
+    while(getline(ss,ex,' '))
+    {
+        vs.push_back(ex);
+    }
+    for (int i = 0; i < vs.size(); i++)
+    {
+        if (vs[i][0] == '(') 
+        {
+            parCount++;
+        }
+
+    }
+    
+    
+    for ( startParCal = 0; startParCal < vs.size(); startParCal++)
+    {
+        if (vs[startParCal][0] == '(')
+        {
+            startpar.push(startParCal);
+        }
+        
+        if (startpar.size() == parCount) 
+            break;
+        
+    }
+    
+    parInVector = 0;
+    for ( endParCal = vs.size(); endParCal  > 0;  endParCal--)
+    {
+       
+        if (vs[endParCal - 1][0] == ')')
+        {
+            
+            endpar.push(endParCal);
+        }
+        
+        if (endpar.size() == parCount)
+            break;
+    }
+    
+    for (int i = 0; i < parCount; i++)
+    {
+        result = Cal(startpar.top(), endpar.top());
+        startpar.pop();
+        endpar.pop();
+        
+        
+    }
+    
+   
+
+
+   
+    
    
 
 	return 0;
