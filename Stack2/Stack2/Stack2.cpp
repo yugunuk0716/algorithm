@@ -14,11 +14,10 @@ stack<int,vector<int>> num;
 stack<int, vector<int>> startpar;
 stack<int, vector<int>> endpar;
 int parCount;
-int Cal(int first , int end) 
+char cal = '+';
+int sum = 0;
+int ParCal(int first , int end) 
 {
-    char cal = '+';
-    int sum = 0;
-    
     int count = 0;
     for (int i = first; i <end; i++)
     {
@@ -105,8 +104,6 @@ int Cal(int first , int end)
                     default:
                         break;
                     }
-
-
                 }
                 else
                 {
@@ -115,8 +112,9 @@ int Cal(int first , int end)
                 }
                 break;
             }
-
+            vs.erase(vs.begin() + i);
         }
+        
 
     }
     int forNum = num.size();
@@ -124,7 +122,9 @@ int Cal(int first , int end)
     {
         sum += num.top();
         num.pop();
+        
     }
+
     cout << "괄호 안" << sum << endl;
     return sum;
     
@@ -136,7 +136,9 @@ int Cal(int first , int end)
         cout << count;
         return 0;
     }
+   
 }
+
 
 int main()
 {
@@ -183,7 +185,6 @@ int main()
        
         if (vs[endParCal - 1][0] == ')')
         {
-            
             endpar.push(endParCal);
         }
         
@@ -193,19 +194,12 @@ int main()
     
     for (int i = 0; i < parCount; i++)
     {
-        result = Cal(startpar.top(), endpar.top());
+        result = ParCal(startpar.top(), endpar.top());
+        
         startpar.pop();
         endpar.pop();
         
-        
     }
-    
-   
-
-
-   
-    
-   
 
 	return 0;
 }
