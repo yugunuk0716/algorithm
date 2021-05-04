@@ -14,6 +14,8 @@ stack<int,vector<int>> num;
 stack<int, vector<int>> startpar;
 stack<int, vector<int>> endpar;
 int parCount;
+int startParCal = 0;
+int endParCal = 0;
 char cal = '+';
 int sum = 0;
 int ParCal(int first , int end) 
@@ -112,7 +114,7 @@ int ParCal(int first , int end)
                 }
                 break;
             }
-            vs.erase(vs.begin() + i);
+            
         }
         
 
@@ -120,9 +122,25 @@ int ParCal(int first , int end)
     int forNum = num.size();
     for (int i = 0; i < forNum; i++)
     {
+       
         sum += num.top();
         num.pop();
         
+    }
+    
+    vs[startParCal][0] = sum;
+    startParCal += 1;
+    for (int i = 0; i < vs.size(); i++)
+    {
+        vs[startParCal][0] = vs[endParCal][0];
+        startParCal++;
+        endParCal++;
+    }
+
+    
+    for (int i = vs.size(); i > vs.size() - endParCal; i--) 
+    {
+        vs.pop_back();
     }
 
     cout << "괄호 안" << sum << endl;
@@ -136,19 +154,28 @@ int ParCal(int first , int end)
         cout << count;
         return 0;
     }
+
    
 }
+
+void Swap(int s, int e) 
+{
+    int m = s;
+    s = e;
+    e = m;
+}
+
 
 
 int main()
 {
     int result = 0;
     parCount = 0;
-    int parInVector = 0;
-    int startParCal = 0;
-    int endParCal = 0;
+    
+    
 
     cout << "숫자와 연산자 사이에 꼭 공백 문자를 넣고 식을 입력해 주세요" << endl;
+    cout << "ex) 1 + 2 * ( 3 + 2 )" << endl;
     string ex;
     getline(cin,ex);
     stringstream ss(ex);
@@ -179,7 +206,6 @@ int main()
         
     }
     
-    parInVector = 0;
     for ( endParCal = vs.size(); endParCal  > 0;  endParCal--)
     {
        
@@ -198,9 +224,9 @@ int main()
         
         startpar.pop();
         endpar.pop();
-        
     }
-
+    
+    
 	return 0;
 }
 #pragma region 맵
