@@ -13,15 +13,20 @@ vector<string> vs;
 stack<int,vector<int>> num;
 stack<int, vector<int>> startpar;
 stack<int, vector<int>> endpar;
+int scount = 0;
 int parCount;
 int startParCal = 0;
 int endParCal = 0;
 char cal = '+';
 int sum = 0;
+
 int ParCal(int first , int end) 
 {
-    int count = 0;
-    for (int i = first; i <end; i++)
+ 
+    int temp = 0;
+   
+    sum = 0;
+    for (int i = first; i < end; i++)
     {
 
         if (vs[i].length() > 1)
@@ -43,15 +48,15 @@ int ParCal(int first , int end)
                 num.push(-t);
                 break;
             case '*':
-                sum = num.top() * t;
+                temp = num.top() * t;
                 num.pop();
-                num.push(sum);
+                num.push(temp);
 
                 break;
             case '/':
-                sum = num.top() / t;
+                temp = num.top() / t;
                 num.pop();
-                num.push(sum);
+                num.push(temp);
             default:
                 break;
             }
@@ -73,11 +78,16 @@ int ParCal(int first , int end)
                 cal = '*';
                 break;
             case '(':
-                count++;
+                scount++;
+                if (scount > 1) 
+                {
+                    cout << "문제에서 괄호는 한쌍만 주어진 다 그러셨습니다!" << endl;
+                    return 0;
+                }
                 //parCount++;
                 break;
             case ')':
-                count--;
+                scount--;
                 break;
 
             default:
@@ -94,18 +104,22 @@ int ParCal(int first , int end)
                         num.push(-b);
                         break;
                     case '*':
-                        sum = num.top() * b;
+                        temp = num.top() * b;
                         num.pop();
-                        num.push(sum);
+                        num.push(temp);
 
                         break;
                     case '/':
-                        sum = num.top() / b;
+                        temp = num.top() / b;
                         num.pop();
-                        num.push(sum);
+                        num.push(temp);
                     default:
                         break;
                     }
+                }
+                else if (vs[i][0] == ' ') 
+                {
+                    continue;
                 }
                 else
                 {
@@ -120,50 +134,22 @@ int ParCal(int first , int end)
 
     }
     int forNum = num.size();
+    
     for (int i = 0; i < forNum; i++)
     {
-       
+        cout <<"계산 전" <<  sum << endl;
         sum += num.top();
+        cout <<"계산 후" << sum << endl;
         num.pop();
-        
     }
-    
     vs[startParCal][0] = sum;
     startParCal += 1;
-    for (int i = 0; i < vs.size(); i++)
-    {
-        vs[startParCal][0] = vs[endParCal][0];
-        startParCal++;
-        endParCal++;
-    }
-
-    
-    for (int i = vs.size(); i > vs.size() - endParCal; i--) 
-    {
-        vs.pop_back();
-    }
 
     cout << "괄호 안" << sum << endl;
     return sum;
-    
-    
-
-    if (count != 0)
-    {
-        cout << "당신이 넣은 것이 숫자가 맞습니까? 만약 숫자가 맞다면 경기게임마이스터고 명재문에게 찾아오세요 ^^3" << endl;
-        cout << count;
-        return 0;
-    }
-
-   
 }
 
-void Swap(int s, int e) 
-{
-    int m = s;
-    s = e;
-    e = m;
-}
+
 
 
 
@@ -172,8 +158,6 @@ int main()
     int result = 0;
     parCount = 0;
     
-    
-
     cout << "숫자와 연산자 사이에 꼭 공백 문자를 넣고 식을 입력해 주세요" << endl;
     cout << "ex) 1 + 2 * ( 3 + 2 )" << endl;
     string ex;
@@ -206,10 +190,10 @@ int main()
         
     }
     
-    for ( endParCal = vs.size(); endParCal  > 0;  endParCal--)
+    for ( endParCal = vs.size() - 1; endParCal  > 0;  endParCal--)
     {
        
-        if (vs[endParCal - 1][0] == ')')
+        if (vs[endParCal][0] == ')')
         {
             endpar.push(endParCal);
         }
@@ -220,11 +204,41 @@ int main()
     
     for (int i = 0; i < parCount; i++)
     {
+        cout << "괄호 안" << endl;
         result = ParCal(startpar.top(), endpar.top());
+       
+        for (int n = startpar.top(); n <= endpar.top(); n++)
+        {
+            vs[n] = ' ';
+        }
+        vs[startpar.top()] = to_string(result);
+        while (true)
+        {
+            startpar.top()++;
+            endpar.top()++;
+
+            if (endpar.top() == vs.size())
+            {
+                break;
+            }
+
+            if (scount > 1) 
+            {
+                vs[startpar.top()] = vs[endpar.top()];
+                vs[endpar.top()] = ' ';
+            }
+            else
+            {
+                cout << "문제에서 괄호는 한쌍만 주어진 다고 그러셨습니다!" << endl;
+                return 0;
+            }
+        }
         
         startpar.pop();
         endpar.pop();
     }
+    
+    cout << "결과 값 : " << ParCal(0, vs.size());
     
     
 	return 0;
