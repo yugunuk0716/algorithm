@@ -1,6 +1,91 @@
 ﻿//20214 유건욱
 
 #include <iostream>
+using namespace std;
+
+typedef int BTData;
+struct BTreeNode
+{
+    BTData data;
+    struct BTreeNode* left;
+    struct BTreeNode* right;
+};
+
+BTreeNode* MakeBTreeNode(void) 
+{
+    BTreeNode* nd = new BTreeNode;
+
+    nd->left = NULL; 
+    nd->right = NULL;
+    return nd;
+}
+void DeleteBTreeNode(BTreeNode* bt) 
+{
+    delete bt;
+}
+BTData GetData(BTreeNode* bt) 
+{
+    return bt->data;
+    
+}
+void SetData(BTreeNode* bt, BTData data) 
+{
+    bt->data = data;
+}
+BTreeNode* GetLeftSubTree(BTreeNode* bt) 
+{
+    return bt->left;
+}
+BTreeNode* GetRightSubTree(BTreeNode* bt)
+{
+    return bt->right;
+}
+void MakeLeftSubTree(BTreeNode* main, BTreeNode* sub) 
+{
+    if (main->left != NULL)
+    {
+        delete main->left;//이미 할당된 노드가 있다면, 기존 노드를 삭제
+    }
+    main->left = sub;
+}
+void MakeRightSubTree(BTreeNode* main, BTreeNode* sub) 
+{
+    if (main->right != NULL)
+    {
+        delete main->right;//이미 할당된 노드가 있다면, 기존 노드를 삭제
+    }
+    main->right = sub;
+}
+
+
+int main()
+{
+    BTreeNode* bt1 = MakeBTreeNode();
+    BTreeNode* bt2 = MakeBTreeNode();
+    BTreeNode* bt3 = MakeBTreeNode();
+    BTreeNode* bt4 = MakeBTreeNode();
+
+    SetData(bt1, 1);
+    SetData(bt2, 2);
+    SetData(bt3, 3);
+    SetData(bt4, 4);
+
+    MakeLeftSubTree(bt1, bt2);
+    MakeLeftSubTree(bt1, bt3);
+    MakeLeftSubTree(bt2, bt4);
+
+    cout << GetData(GetLeftSubTree(bt1)) << endl;
+    cout << GetData(GetLeftSubTree(GetLeftSubTree(bt1))) << endl;
+
+    DeleteBTreeNode(bt1);
+    DeleteBTreeNode(bt2);
+    DeleteBTreeNode(bt3);
+    DeleteBTreeNode(bt4);
+
+    return 0;
+}
+
+/*
 
 #pragma region 자료형 정의
 //자료형 정의
@@ -15,7 +100,7 @@ struct BTreeNode
 #pragma region 노드 생성
 BTreeNode* bt1 = MakeBTreeNode(); // MakeBTreeNode()함수를 만들어 BTreeNode 형의 메모리를 만들수 있도록 하고, 이 메모리 주솟값을 반환 받을 수 있게 한다
 
-BTreeNode* MakeBTreeeNode(void) 
+BTreeNode* MakeBTreeeNode(void)
 {
     BTreeNode* nd = new BTreeNode;// 동적 메모리를 할당하는 부분이다
 
@@ -27,7 +112,7 @@ BTreeNode* MakeBTreeeNode(void)
 #pragma region 메모리 삭제 함수
 Delete(bt);
 
-void Delete(BTreeNode* bt) 
+void Delete(BTreeNode* bt)
 {
     delete bt;//bt가 가리키고 있는 메모리를 삭제한다
 }
@@ -47,9 +132,9 @@ MakeLeftSubTree(bt1, bt2);// 첫 인자 값은 부모 노드에 해당하는 노
 MakeRightSubTree(bt1, bt3);// 첫 인자 값은 부모 노드에 해당하는 노드의 주솟값을 넣어주고 두번 째 인자는 오른쪽 자식 노드로 연결할 노드의 주솟값을 넣어 준다
 
 
-void MakeLeftSubTree(BTreeNode*main,BTreeNode*sub) 
+void MakeLeftSubTree(BTreeNode*main,BTreeNode*sub)
 {
-    if (main->left != NULL) 
+    if (main->left != NULL)
     {
         delete main->left;//이미 할당된 노드가 있다면, 기존 노드를 삭제
     }
@@ -67,10 +152,4 @@ void MakeRightSubTree(BTreeNode* main, BTreeNode* sub)
 
 
 
-int main()
-{
-    
-
-    return 0;
-}
-
+*/
