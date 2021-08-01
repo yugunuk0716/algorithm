@@ -1,0 +1,13 @@
+D:\수업\algorithm2\7_29\7_29\bin\Debug\netcoreapp3.1\7_29.exe
+D:\수업\algorithm2\7_29\7_29\bin\Debug\netcoreapp3.1\7_29.deps.json
+D:\수업\algorithm2\7_29\7_29\bin\Debug\netcoreapp3.1\7_29.runtimeconfig.json
+D:\수업\algorithm2\7_29\7_29\bin\Debug\netcoreapp3.1\7_29.runtimeconfig.dev.json
+D:\수업\algorithm2\7_29\7_29\bin\Debug\netcoreapp3.1\7_29.dll
+D:\수업\algorithm2\7_29\7_29\bin\Debug\netcoreapp3.1\7_29.pdb
+D:\수업\algorithm2\7_29\7_29\obj\Debug\netcoreapp3.1\7_29.csproj.AssemblyReference.cache
+D:\수업\algorithm2\7_29\7_29\obj\Debug\netcoreapp3.1\7_29.AssemblyInfoInputs.cache
+D:\수업\algorithm2\7_29\7_29\obj\Debug\netcoreapp3.1\7_29.AssemblyInfo.cs
+D:\수업\algorithm2\7_29\7_29\obj\Debug\netcoreapp3.1\7_29.csproj.CoreCompileInputs.cache
+D:\수업\algorithm2\7_29\7_29\obj\Debug\netcoreapp3.1\7_29.dll
+D:\수업\algorithm2\7_29\7_29\obj\Debug\netcoreapp3.1\7_29.pdb
+D:\수업\algorithm2\7_29\7_29\obj\Debug\netcoreapp3.1\7_29.genruntimeconfig.cache
