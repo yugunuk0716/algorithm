@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\수업\\algorithm2\\7_30\\7_30\\7_30.csproj",
+      "projectUniqueName": "D:\\.School\\algorithm2\\7_30\\7_30\\7_30.csproj",
       "projectName": "7_30",
-      "projectPath": "D:\\수업\\algorithm2\\7_30\\7_30\\7_30.csproj",
+      "projectPath": "D:\\.School\\algorithm2\\7_30\\7_30\\7_30.csproj",
       "packagesPath": "C:\\Users\\ggmrj\\.nuget\\packages\\",
-      "outputPath": "D:\\수업\\algorithm2\\7_30\\7_30\\obj\\",
+      "outputPath": "D:\\.School\\algorithm2\\7_30\\7_30\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ggmrj\\AppData\\Roaming\\NuGet\\NuGet.Config",
