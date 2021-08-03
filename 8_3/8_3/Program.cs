@@ -8,8 +8,54 @@ namespace _8_3
     class Program
     {
 
+        static void Main()
+        {
+            Write(Caesar(ReadLine(), int.Parse(ReadLine())));
+        }
+
+        static string Caesar(string origin, int dist)
+        {
+            string answer = string.Empty;
+            int sum = 0;
+            char transe = '0';
+
+            if (origin.Length <= 8000 && 1 <= dist && dist <= 5)
+            {
+                char[] orings = origin.ToCharArray();
+                foreach (var item in orings)
+                {
+                    if (item != ' ')
+                    {
+
+                        sum = (int)item + dist;
 
 
+                        if (sum > 'Z')
+                        {
+                            sum -= 1;
+                            transe = (char)('A' + (char)sum - 'Z');
+                        }
+                        else if (sum > 'z')
+                        {
+                            sum -= 1;
+                            transe = (char)('a' + (char)sum - 'z');
+                        }
+                        else
+                        {
+                            transe = (char)sum;
+                        }
+                    }
+                    else
+                    {
+                        transe = ' ';
+                    }
+                    answer += transe.ToString();
+                }
+                return answer;
+            }
+
+            return "원문의 길이는 8000자까지만 가능합니다, 그리고 원문으로 부터의 거리는 1이상 5이하입니다";
+        }
     }
 }
 #region 11번
@@ -126,7 +172,5 @@ namespace _8_3
 //        answer += i % 2 == 0 ? "수" : "박";
 //    }
 //    return answer;
-
-
 //}
 #endregion
