@@ -9,7 +9,40 @@ namespace _8_9
     class Program
     {
 
+        static void Main() 
+        {
+            WriteLine(Solution26("1one2two3zero"));
+        }
+        static int Solution26(string s) 
+        {
+            string answer = string.Empty;
+            List<char> chList = s.ToList();
+            string[] numbers = new string[] { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            string temp = string.Empty;
 
+            for (int i = 0 ; i < chList.Count ; i++)
+            {
+                if (!int.TryParse(chList[i].ToString(), out int a)) 
+                {
+                    temp += chList[i];
+                  
+                    for (int k = 0 ; k < chList.Count ; k++)
+                    {
+                        if (temp == numbers[k % 10])
+                        {
+                            temp = string.Empty;
+                            answer += k % 10;
+                        }
+                    }
+                }
+                else
+                {
+                    answer += a;
+                }
+            }
+
+            return int.Parse(answer);
+        }
 
 
     }
