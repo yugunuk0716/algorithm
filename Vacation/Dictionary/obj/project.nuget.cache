@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gIU/MWsJ3RTXn9Bb/kRAUxr6iWWyTU7nxkxfozluYTgaV2PwqfC2kNG+mut70CuE2DVj3NJxiSsy8LXz8rwnSg==",
+  "dgSpecHash": "vQOHo3BrhU0stOiTE9kbZjRihyDzHH+67XGUSVPPr1P2nzHNgtTXuq9lLu4MjfPZAUQBkyf59wS/ofKDxfXONg==",
   "success": true,
-  "projectFilePath": "D:\\School\\C#\\BracketCheck\\Dictionary\\Dictionary.csproj",
+  "projectFilePath": "D:\\School\\C#\\Algorithm\\Vacation\\Dictionary\\Dictionary.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\School\\C#\\BracketCheck\\Dictionary\\Dictionary.csproj": {}
+    "D:\\School\\C#\\Algorithm\\Vacation\\Dictionary\\Dictionary.csproj": {}
   },
   "projects": {
-    "D:\\School\\C#\\BracketCheck\\Dictionary\\Dictionary.csproj": {
+    "D:\\School\\C#\\Algorithm\\Vacation\\Dictionary\\Dictionary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\School\\C#\\BracketCheck\\Dictionary\\Dictionary.csproj",
+        "projectUniqueName": "D:\\School\\C#\\Algorithm\\Vacation\\Dictionary\\Dictionary.csproj",
         "projectName": "Dictionary",
-        "projectPath": "D:\\School\\C#\\BracketCheck\\Dictionary\\Dictionary.csproj",
+        "projectPath": "D:\\School\\C#\\Algorithm\\Vacation\\Dictionary\\Dictionary.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "D:\\School\\C#\\BracketCheck\\Dictionary\\obj\\",
+        "outputPath": "D:\\School\\C#\\Algorithm\\Vacation\\Dictionary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",

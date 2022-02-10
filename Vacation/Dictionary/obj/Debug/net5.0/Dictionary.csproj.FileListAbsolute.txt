@@ -1,0 +1,16 @@
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\Dictionary.csproj.AssemblyReference.cache
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\Dictionary.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\Dictionary.AssemblyInfoInputs.cache
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\Dictionary.AssemblyInfo.cs
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\Dictionary.csproj.CoreCompileInputs.cache
+D:\School\C#\Algorithm\Vacation\Dictionary\bin\Debug\net5.0\Dictionary.exe
+D:\School\C#\Algorithm\Vacation\Dictionary\bin\Debug\net5.0\Dictionary.deps.json
+D:\School\C#\Algorithm\Vacation\Dictionary\bin\Debug\net5.0\Dictionary.runtimeconfig.json
+D:\School\C#\Algorithm\Vacation\Dictionary\bin\Debug\net5.0\Dictionary.runtimeconfig.dev.json
+D:\School\C#\Algorithm\Vacation\Dictionary\bin\Debug\net5.0\Dictionary.dll
+D:\School\C#\Algorithm\Vacation\Dictionary\bin\Debug\net5.0\ref\Dictionary.dll
+D:\School\C#\Algorithm\Vacation\Dictionary\bin\Debug\net5.0\Dictionary.pdb
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\Dictionary.dll
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\ref\Dictionary.dll
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\Dictionary.pdb
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\Dictionary.genruntimeconfig.cache

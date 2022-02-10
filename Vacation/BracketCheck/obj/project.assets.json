@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\School\\C#\\BracketCheck\\BracketCheck\\BracketCheck.csproj",
+      "projectUniqueName": "D:\\School\\C#\\Algorithm\\Vacation\\BracketCheck\\BracketCheck.csproj",
       "projectName": "BracketCheck",
-      "projectPath": "D:\\School\\C#\\BracketCheck\\BracketCheck\\BracketCheck.csproj",
+      "projectPath": "D:\\School\\C#\\Algorithm\\Vacation\\BracketCheck\\BracketCheck.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "D:\\School\\C#\\BracketCheck\\BracketCheck\\obj\\",
+      "outputPath": "D:\\School\\C#\\Algorithm\\Vacation\\BracketCheck\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",

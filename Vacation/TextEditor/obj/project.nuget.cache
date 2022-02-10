@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s59XN3sKjGP5QCnr4CyvXgOwyRjnptY8vCPSUudaTvCv+SO2BPWcL+ftYPBVGH7FMfkzBwdgjQdd2mIxSUqytg==",
+  "dgSpecHash": "4P3kHlgxMQfBNLZ2nl8m9uIhvafXR5SJODvk+EalEe5+jWbatIAKWqiTopkHELU3BFulft6JQCFuM+0zohaKrA==",
   "success": true,
-  "projectFilePath": "D:\\School\\C#\\BracketCheck\\TextEditor\\TextEditor.csproj",
+  "projectFilePath": "D:\\School\\C#\\Algorithm\\Vacation\\TextEditor\\TextEditor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

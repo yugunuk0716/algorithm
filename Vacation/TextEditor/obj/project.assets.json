@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\School\\C#\\BracketCheck\\TextEditor\\TextEditor.csproj",
+      "projectUniqueName": "D:\\School\\C#\\Algorithm\\Vacation\\TextEditor\\TextEditor.csproj",
       "projectName": "TextEditor",
-      "projectPath": "D:\\School\\C#\\BracketCheck\\TextEditor\\TextEditor.csproj",
+      "projectPath": "D:\\School\\C#\\Algorithm\\Vacation\\TextEditor\\TextEditor.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "D:\\School\\C#\\BracketCheck\\TextEditor\\obj\\",
+      "outputPath": "D:\\School\\C#\\Algorithm\\Vacation\\TextEditor\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",

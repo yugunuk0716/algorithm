@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZUyi26A1669iMilkgUo7pL1dHZMPDvfi12oClIq5ETv7mvcf21nT2dOQJJyNSQbWTJIn0vlRK+4v/tvVfJef1w==",
+  "dgSpecHash": "4OSJIVG6sHulH72cN1BM0GnwdaRmWzdmBikNn+GYWws9kkE6gsYvhPWFWF2T6RKeuk0A5UqsGtufD+a1PZJR2A==",
   "success": true,
-  "projectFilePath": "D:\\School\\C#\\BracketCheck\\BracketCheck\\BracketCheck.csproj",
+  "projectFilePath": "D:\\School\\C#\\Algorithm\\Vacation\\BracketCheck\\BracketCheck.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
