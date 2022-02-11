@@ -13,32 +13,21 @@ namespace Dictionary
 
         public BinaryTreeNode<T> Right { get; set; }
 
-
-
         public BinaryTreeNode(T data)
-
         {
-
             this.Data = data;
-
         }
 
     }
 
-
-
-    // // 이진검색트리 클래스스
-
     public class BST<T>
     {
-
         private BinaryTreeNode<T> root = null;
         private Comparer<T> comparer = Comparer<T>.Default;
         private List<T> sortedDataList = new List<T>();
         public List<BinaryTreeNode<T>> nodeList = new List<BinaryTreeNode<T>>();
 
-
-        public void Insert(T val)
+        public void Insert(T data)
         {
 
             BinaryTreeNode<T> node = root;
@@ -46,7 +35,7 @@ namespace Dictionary
             if (node == null)
             {
 
-                root = new BinaryTreeNode<T>(val);
+                root = new BinaryTreeNode<T>(data);
                 nodeList.Add(root);
                 return;
 
@@ -54,8 +43,7 @@ namespace Dictionary
 
             while (node != null)
             {
-
-                int result = comparer.Compare(node.Data, val);
+                int result = comparer.Compare(node.Data, data);
 
                 if (result == 0)
                 {
@@ -69,7 +57,7 @@ namespace Dictionary
 
                     if (node.Left == null)
                     {
-                        node.Left = new BinaryTreeNode<T>(val);
+                        node.Left = new BinaryTreeNode<T>(data);
                         nodeList.Add(node.Left);
                         return;
                     }
@@ -81,7 +69,7 @@ namespace Dictionary
                 {
                     if (node.Right == null)
                     {
-                        node.Right = new BinaryTreeNode<T>(val);
+                        node.Right = new BinaryTreeNode<T>(data);
                         nodeList.Add(node.Right);
                         return;
                     }
@@ -94,33 +82,20 @@ namespace Dictionary
 
         }
 
-        
-
-       
-
-
         public void PreOrderTraversal()
         {
-
             PreOrderRecursive(root);
-
         }
-
-
 
         private void PreOrderRecursive(BinaryTreeNode<T> node)
         {
-
             if (node == null) return;
 
-            //Console.WriteLine(node.Data);
             sortedDataList.Add(node.Data);
             PreOrderRecursive(node.Left);
 
             PreOrderRecursive(node.Right);
-
         }
-
 
         public List<T> GetSortedList()
         {
@@ -151,7 +126,7 @@ namespace Dictionary
                 Console.WriteLine("---5. 종료---");
                 Console.Write(">> ");
                 
-                if (int.TryParse(ReadLine(),out int result))
+                if (int.TryParse(ReadLine(), out int result))
                 {
                     input = result;
                 }
@@ -161,7 +136,8 @@ namespace Dictionary
                     Thread.Sleep(1000);
                     continue;
                 }
-                
+
+
 
                 if (input == 1)
                 {
@@ -213,6 +189,7 @@ namespace Dictionary
 
             if(temp != null)
             {
+                temp.Data = null;
                 bst.nodeList.Remove(temp);
             }
             else
@@ -253,82 +230,4 @@ namespace Dictionary
 
     }
 
-    //class Program
-    //{
-    //    static int wordCount = 0;
-
-    //    static void Main(string[] args)
-    //    {
-    //        Tree tree = new Tree();
-
-    //        while (true)
-    //        {
-    //            Console.Clear();
-    //            Console.WriteLine("텍스트 편집기");
-    //            Console.WriteLine("---1. 입력---");
-    //            Console.WriteLine("---2. 삭제---");
-    //            Console.WriteLine("---3. 탐색---");
-    //            Console.WriteLine("---4. 출력---");
-    //            Console.WriteLine("---5. 종료---");
-    //            Console.Write(">> ");
-    //            int input = int.Parse(ReadLine());
-
-    //            if (input == 1)
-    //            {
-    //                PutWord(tree);
-    //            }
-    //            else if (input == 2)
-    //            {
-                    
-    //            }
-    //            else if (input == 3)
-    //            {
-                    
-    //            }
-    //            else if (input == 4)
-    //            {
-    //                PrintWords(tree);
-    //            }
-    //            else if (input == 5)
-    //            {
-    //                break;
-    //            }
-    //            else
-    //            {
-    //                Console.WriteLine("잘못된 입력입니다 다시 입력하세연");
-    //                continue;
-    //            }
-    //            Console.WriteLine("메인으로 가는 중입니다 잠시만 기다려 주세요");
-    //            Thread.Sleep(3000);
-
-    //        }
-    //    }
-
-
-        
-
-    //    static void PutWord(Tree tree)
-    //    {
-    //        if (tree.Insert(wordCount))
-    //        {
-    //            wordCount++;
-    //        }
-    //        else
-    //        {
-    //            Console.WriteLine("?");
-    //        }
-    //    }
-
-    //    static void PrintWords(Tree tree)
-    //    {
-    //        for (int i = 0; i < wordCount; i++)
-    //        {
-    //            //Console.WriteLine($"{i + 1}. {tree.GetNode(i)}");
-    //        }
-    //    }
-
-
-
-
-    //}
 }
