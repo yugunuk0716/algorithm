@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vQOHo3BrhU0stOiTE9kbZjRihyDzHH+67XGUSVPPr1P2nzHNgtTXuq9lLu4MjfPZAUQBkyf59wS/ofKDxfXONg==",
+  "dgSpecHash": "IJ3lu30r3JANllf4+wQZonIDSJEPn+urB4Zw4xMYORQvzQgrf8mft2i/QAnceZdb2RGS/gDHve4J6jx0Q3u9ag==",
   "success": true,
-  "projectFilePath": "D:\\School\\C#\\Algorithm\\Vacation\\Dictionary\\Dictionary.csproj",
+  "projectFilePath": "D:\\School\\C#\\Algorithm\\Vacation\\Dictionary\\TreeDictionary.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

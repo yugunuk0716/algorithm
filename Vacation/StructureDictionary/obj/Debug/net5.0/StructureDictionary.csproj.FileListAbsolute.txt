@@ -1,0 +1,16 @@
+D:\School\C#\Algorithm\Vacation\StructureDictionary\bin\Debug\net5.0\StructureDictionary.exe
+D:\School\C#\Algorithm\Vacation\StructureDictionary\bin\Debug\net5.0\StructureDictionary.deps.json
+D:\School\C#\Algorithm\Vacation\StructureDictionary\bin\Debug\net5.0\StructureDictionary.runtimeconfig.json
+D:\School\C#\Algorithm\Vacation\StructureDictionary\bin\Debug\net5.0\StructureDictionary.runtimeconfig.dev.json
+D:\School\C#\Algorithm\Vacation\StructureDictionary\bin\Debug\net5.0\StructureDictionary.dll
+D:\School\C#\Algorithm\Vacation\StructureDictionary\bin\Debug\net5.0\ref\StructureDictionary.dll
+D:\School\C#\Algorithm\Vacation\StructureDictionary\bin\Debug\net5.0\StructureDictionary.pdb
+D:\School\C#\Algorithm\Vacation\StructureDictionary\obj\Debug\net5.0\StructureDictionary.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\C#\Algorithm\Vacation\StructureDictionary\obj\Debug\net5.0\StructureDictionary.AssemblyInfoInputs.cache
+D:\School\C#\Algorithm\Vacation\StructureDictionary\obj\Debug\net5.0\StructureDictionary.AssemblyInfo.cs
+D:\School\C#\Algorithm\Vacation\StructureDictionary\obj\Debug\net5.0\StructureDictionary.csproj.CoreCompileInputs.cache
+D:\School\C#\Algorithm\Vacation\StructureDictionary\obj\Debug\net5.0\StructureDictionary.dll
+D:\School\C#\Algorithm\Vacation\StructureDictionary\obj\Debug\net5.0\ref\StructureDictionary.dll
+D:\School\C#\Algorithm\Vacation\StructureDictionary\obj\Debug\net5.0\StructureDictionary.pdb
+D:\School\C#\Algorithm\Vacation\StructureDictionary\obj\Debug\net5.0\StructureDictionary.genruntimeconfig.cache
+D:\School\C#\Algorithm\Vacation\StructureDictionary\obj\Debug\net5.0\StructureDictionary.csproj.AssemblyReference.cache

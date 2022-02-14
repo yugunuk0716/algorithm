@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\School\\C#\\Algorithm\\Vacation\\Dictionary\\TreeDictionary.csproj",
-      "projectName": "TreeDictionary",
-      "projectPath": "D:\\School\\C#\\Algorithm\\Vacation\\Dictionary\\TreeDictionary.csproj",
+      "projectUniqueName": "D:\\School\\C#\\Algorithm\\Vacation\\StructureDictionary\\StructureDictionary.csproj",
+      "projectName": "StructureDictionary",
+      "projectPath": "D:\\School\\C#\\Algorithm\\Vacation\\StructureDictionary\\StructureDictionary.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "D:\\School\\C#\\Algorithm\\Vacation\\Dictionary\\obj\\",
+      "outputPath": "D:\\School\\C#\\Algorithm\\Vacation\\StructureDictionary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",

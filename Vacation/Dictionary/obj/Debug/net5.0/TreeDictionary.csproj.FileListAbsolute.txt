@@ -1,0 +1,16 @@
+D:\School\C#\Algorithm\Vacation\Dictionary\bin\Debug\net5.0\TreeDictionary.exe
+D:\School\C#\Algorithm\Vacation\Dictionary\bin\Debug\net5.0\TreeDictionary.deps.json
+D:\School\C#\Algorithm\Vacation\Dictionary\bin\Debug\net5.0\TreeDictionary.runtimeconfig.json
+D:\School\C#\Algorithm\Vacation\Dictionary\bin\Debug\net5.0\TreeDictionary.runtimeconfig.dev.json
+D:\School\C#\Algorithm\Vacation\Dictionary\bin\Debug\net5.0\TreeDictionary.dll
+D:\School\C#\Algorithm\Vacation\Dictionary\bin\Debug\net5.0\ref\TreeDictionary.dll
+D:\School\C#\Algorithm\Vacation\Dictionary\bin\Debug\net5.0\TreeDictionary.pdb
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\TreeDictionary.csproj.AssemblyReference.cache
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\TreeDictionary.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\TreeDictionary.AssemblyInfoInputs.cache
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\TreeDictionary.AssemblyInfo.cs
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\TreeDictionary.csproj.CoreCompileInputs.cache
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\TreeDictionary.dll
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\ref\TreeDictionary.dll
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\TreeDictionary.pdb
+D:\School\C#\Algorithm\Vacation\Dictionary\obj\Debug\net5.0\TreeDictionary.genruntimeconfig.cache
