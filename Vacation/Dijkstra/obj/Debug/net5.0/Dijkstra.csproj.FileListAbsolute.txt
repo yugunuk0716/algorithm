@@ -1,0 +1,16 @@
+D:\School\C#\Algorithm\Vacation\Dijkstra\obj\Debug\net5.0\Dijkstra.csproj.AssemblyReference.cache
+D:\School\C#\Algorithm\Vacation\Dijkstra\obj\Debug\net5.0\Dijkstra.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\C#\Algorithm\Vacation\Dijkstra\obj\Debug\net5.0\Dijkstra.AssemblyInfoInputs.cache
+D:\School\C#\Algorithm\Vacation\Dijkstra\obj\Debug\net5.0\Dijkstra.AssemblyInfo.cs
+D:\School\C#\Algorithm\Vacation\Dijkstra\obj\Debug\net5.0\Dijkstra.csproj.CoreCompileInputs.cache
+D:\School\C#\Algorithm\Vacation\Dijkstra\bin\Debug\net5.0\Dijkstra.exe
+D:\School\C#\Algorithm\Vacation\Dijkstra\bin\Debug\net5.0\Dijkstra.deps.json
+D:\School\C#\Algorithm\Vacation\Dijkstra\bin\Debug\net5.0\Dijkstra.runtimeconfig.json
+D:\School\C#\Algorithm\Vacation\Dijkstra\bin\Debug\net5.0\Dijkstra.runtimeconfig.dev.json
+D:\School\C#\Algorithm\Vacation\Dijkstra\bin\Debug\net5.0\Dijkstra.dll
+D:\School\C#\Algorithm\Vacation\Dijkstra\bin\Debug\net5.0\ref\Dijkstra.dll
+D:\School\C#\Algorithm\Vacation\Dijkstra\bin\Debug\net5.0\Dijkstra.pdb
+D:\School\C#\Algorithm\Vacation\Dijkstra\obj\Debug\net5.0\Dijkstra.dll
+D:\School\C#\Algorithm\Vacation\Dijkstra\obj\Debug\net5.0\ref\Dijkstra.dll
+D:\School\C#\Algorithm\Vacation\Dijkstra\obj\Debug\net5.0\Dijkstra.pdb
+D:\School\C#\Algorithm\Vacation\Dijkstra\obj\Debug\net5.0\Dijkstra.genruntimeconfig.cache
