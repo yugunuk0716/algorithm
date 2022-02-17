@@ -6,7 +6,7 @@ namespace BracketCheck
     class Program
     {
 
-        public static string input = "if((a + b) {a + b} [ a + b])";
+        public static string input = Console.ReadLine();
         public static Stack<char> bracketStack = new Stack<char>();
 
         static void Main()

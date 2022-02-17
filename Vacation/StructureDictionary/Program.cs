@@ -100,7 +100,7 @@ namespace StructureDictionary
 
         static void Insert()
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < ARRAY_SIZE; i++)
             {
                 Word[] temp = dictionary[i];
 
@@ -205,7 +205,6 @@ namespace StructureDictionary
             {
                 if(dictionary[i] != null)
                 {
-                    //Array.Sort(dictionary[i], comparer);
 
                     dictionary[i].ToList().Sort((x, y) => x.data.CompareTo(y.data));
 

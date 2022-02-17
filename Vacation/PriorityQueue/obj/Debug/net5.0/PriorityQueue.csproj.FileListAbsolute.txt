@@ -1,0 +1,15 @@
+D:\School\C#\Algorithm\Vacation\PriorityQueue\bin\Debug\net5.0\PriorityQueue.exe
+D:\School\C#\Algorithm\Vacation\PriorityQueue\bin\Debug\net5.0\PriorityQueue.deps.json
+D:\School\C#\Algorithm\Vacation\PriorityQueue\bin\Debug\net5.0\PriorityQueue.runtimeconfig.json
+D:\School\C#\Algorithm\Vacation\PriorityQueue\bin\Debug\net5.0\PriorityQueue.runtimeconfig.dev.json
+D:\School\C#\Algorithm\Vacation\PriorityQueue\bin\Debug\net5.0\PriorityQueue.dll
+D:\School\C#\Algorithm\Vacation\PriorityQueue\bin\Debug\net5.0\ref\PriorityQueue.dll
+D:\School\C#\Algorithm\Vacation\PriorityQueue\bin\Debug\net5.0\PriorityQueue.pdb
+D:\School\C#\Algorithm\Vacation\PriorityQueue\obj\Debug\net5.0\PriorityQueue.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\C#\Algorithm\Vacation\PriorityQueue\obj\Debug\net5.0\PriorityQueue.AssemblyInfoInputs.cache
+D:\School\C#\Algorithm\Vacation\PriorityQueue\obj\Debug\net5.0\PriorityQueue.AssemblyInfo.cs
+D:\School\C#\Algorithm\Vacation\PriorityQueue\obj\Debug\net5.0\PriorityQueue.csproj.CoreCompileInputs.cache
+D:\School\C#\Algorithm\Vacation\PriorityQueue\obj\Debug\net5.0\PriorityQueue.dll
+D:\School\C#\Algorithm\Vacation\PriorityQueue\obj\Debug\net5.0\ref\PriorityQueue.dll
+D:\School\C#\Algorithm\Vacation\PriorityQueue\obj\Debug\net5.0\PriorityQueue.pdb
+D:\School\C#\Algorithm\Vacation\PriorityQueue\obj\Debug\net5.0\PriorityQueue.genruntimeconfig.cache
