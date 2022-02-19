@@ -125,14 +125,28 @@ namespace Dijkstra
                             Console.Write(">> ");
                             if (int.TryParse(Console.ReadLine(), out int distance))
                             {
-
                                 dijkstra.AddNode(row, col, distance);
                             }
 
                         }
                     }
                 }
-                dijkstra.Serch( input - 1, 0);
+                Console.WriteLine("탐색 시작 인덱스를 입력하세요");
+                Console.Write(">> ");
+                if (int.TryParse(Console.ReadLine(), out int startIndex))
+                {
+                    Console.WriteLine("탐색 종료 인덱스를 입력하세요");
+                    Console.Write(">> ");
+                    if (int.TryParse(Console.ReadLine(), out int endIndex))
+                    {
+                        if (startIndex < 0 || startIndex > input - 1 || endIndex > input - 1 || endIndex < 0)
+                        {
+                            Console.WriteLine("인덱스에 해당하는 노드가 없음");
+                            return;
+                        }
+                        dijkstra.Serch(startIndex, endIndex);
+                    }
+                }
             }
         }
     }

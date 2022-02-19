@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StructureDictionary", "Stru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PriorityQueue", "PriorityQueue\PriorityQueue.csproj", "{840D92A1-9781-48CE-BB13-58C98BD0943D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dijkstra", "Dijkstra\Dijkstra.csproj", "{939C3EBF-C97E-42D8-9D0F-D0B05DA7A180}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dijkstra", "Dijkstra\Dijkstra.csproj", "{939C3EBF-C97E-42D8-9D0F-D0B05DA7A180}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Astar", "Astar\Astar.csproj", "{6C2D5B3B-714C-421D-8E26-F6922FA13385}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{939C3EBF-C97E-42D8-9D0F-D0B05DA7A180}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{939C3EBF-C97E-42D8-9D0F-D0B05DA7A180}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{939C3EBF-C97E-42D8-9D0F-D0B05DA7A180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C2D5B3B-714C-421D-8E26-F6922FA13385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C2D5B3B-714C-421D-8E26-F6922FA13385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C2D5B3B-714C-421D-8E26-F6922FA13385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C2D5B3B-714C-421D-8E26-F6922FA13385}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
