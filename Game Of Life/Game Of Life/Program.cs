@@ -15,9 +15,12 @@ namespace GameOfLife
         //현재 세대 수
         public int generationCount;
 
+		//행
         int width;
+		//열
         int height;
 
+		//생성자
         public LifeGame(int[,] cells)
         {
             curGeneration = (int[,])cells.Clone();
@@ -100,10 +103,12 @@ namespace GameOfLife
 			for (int y = 0; y < height; y++)
 			{
 				for (int x = 0; x < width; x++)
-					Console.Write("{0}", Neighbors(x, y));
+					Console.Write($"{Neighbors(x, y)}");
 				Console.WriteLine();
 			}
 		}
+
+		// 2중 for문으로 각각의 세포가 살아있어야 될지 판단하는 함수
 		public void ProcessGeneration()
 		{
 			int[,] nextGeneration = new int[height, width];
@@ -127,17 +132,23 @@ namespace GameOfLife
 			curGeneration = (int[,])nextGeneration.Clone();
 		}
 
+		//세포가 살아있으면 1아니면 0을 들고있는 배열에서 1일 땐 ■ 아니면 공백을 출력
 		public void DrawGeneration()
 		{
 			for (int y = 0; y < height; y++)
 			{
 				for (int x = 0; x < width; x++)
-					Console.Write("{0}", curGeneration[y, x]);
+                {
+					string curGenStr = curGeneration[y, x] == 1 ? "■" : "  ";
+					Console.Write(curGenStr);
+				}
+			
 				Console.WriteLine();
 			}
 			Console.WriteLine();
 		}
 
+		//살아있는 세포의 수를 확인
 		public int AliveCells()
 		{
 			int count = 0;
@@ -156,6 +167,7 @@ namespace GameOfLife
 
 	class Program
 	{
+		//기본 세포 배열
 		public static int[,] cell = new int[,]
 		{
 			{ 1, 0, 0, 0, 0, 0, 0, 0, 1, 1,},
@@ -170,12 +182,14 @@ namespace GameOfLife
 
 		private static void Main(string[] args)
 		{
+			//사이클 생성
 			LifeGame lifeGrid = new LifeGame(cell);
 
 			Console.WriteLine("0번 째 세대");
 			lifeGrid.DrawGeneration();
 			Console.WriteLine();
 
+			//반복~~
 			while (lifeGrid.AliveCells() > 0)
 			{
 				Console.Clear();
