@@ -193,7 +193,6 @@ namespace GameOfLife
 			while (lifeGrid.AliveCells() > 0)
 			{
 				Console.Clear();
-				string response;
 
 				Console.WriteLine($"{lifeGrid.generationCount}번 째 세대");
 				Console.WriteLine();
@@ -210,13 +209,10 @@ namespace GameOfLife
 				}
 				else
 				{
-					Thread.Sleep(1000);
+					Thread.Sleep(300);
 					Console.WriteLine("Enter 키를 눌러 진행하세요");
 
-					response = Console.ReadLine();
-
-					if (response == "n" || response == "N")
-						break;
+					
 				}
 
 				
