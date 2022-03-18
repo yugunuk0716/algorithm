@@ -1,0 +1,16 @@
+D:\School\C#\Algorithm\Game Of Life\Game Of Life\bin\Debug\net5.0\Game Of Life.exe
+D:\School\C#\Algorithm\Game Of Life\Game Of Life\bin\Debug\net5.0\Game Of Life.deps.json
+D:\School\C#\Algorithm\Game Of Life\Game Of Life\bin\Debug\net5.0\Game Of Life.runtimeconfig.json
+D:\School\C#\Algorithm\Game Of Life\Game Of Life\bin\Debug\net5.0\Game Of Life.runtimeconfig.dev.json
+D:\School\C#\Algorithm\Game Of Life\Game Of Life\bin\Debug\net5.0\Game Of Life.dll
+D:\School\C#\Algorithm\Game Of Life\Game Of Life\bin\Debug\net5.0\ref\Game Of Life.dll
+D:\School\C#\Algorithm\Game Of Life\Game Of Life\bin\Debug\net5.0\Game Of Life.pdb
+D:\School\C#\Algorithm\Game Of Life\Game Of Life\obj\Debug\net5.0\Game Of Life.csproj.AssemblyReference.cache
+D:\School\C#\Algorithm\Game Of Life\Game Of Life\obj\Debug\net5.0\Game Of Life.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\C#\Algorithm\Game Of Life\Game Of Life\obj\Debug\net5.0\Game Of Life.AssemblyInfoInputs.cache
+D:\School\C#\Algorithm\Game Of Life\Game Of Life\obj\Debug\net5.0\Game Of Life.AssemblyInfo.cs
+D:\School\C#\Algorithm\Game Of Life\Game Of Life\obj\Debug\net5.0\Game Of Life.csproj.CoreCompileInputs.cache
+D:\School\C#\Algorithm\Game Of Life\Game Of Life\obj\Debug\net5.0\Game Of Life.dll
+D:\School\C#\Algorithm\Game Of Life\Game Of Life\obj\Debug\net5.0\ref\Game Of Life.dll
+D:\School\C#\Algorithm\Game Of Life\Game Of Life\obj\Debug\net5.0\Game Of Life.pdb
+D:\School\C#\Algorithm\Game Of Life\Game Of Life\obj\Debug\net5.0\Game Of Life.genruntimeconfig.cache
