@@ -210,7 +210,7 @@ namespace GameOfLife
 				else
 				{
 					Thread.Sleep(300);
-					Console.WriteLine("Enter 키를 눌러 진행하세요");
+					//Console.WriteLine("Enter 키를 눌러 진행하세요");
 
 					
 				}
